@@ -16,6 +16,17 @@ public class LineComparison {
 		return length;
 	}
 	
+	public float equalityCheck(float len1, float len2) {
+		if(len1 == len2) {
+			System.out.println("Length of two lines are Equal");
+		} else if(len1 < len2) {
+			System.out.println("Length of line1 is smaller than line 2");
+		} else if(len1 > len2) {
+			System.out.println("Length of line1 is greater than line 2");
+		}
+		return 0;
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation");
 		LineComparison dist = new LineComparison();
@@ -23,6 +34,7 @@ public class LineComparison {
 		float length2 = dist.length();
 		System.out.printf("Length of the line 1 is %.2f",length1);
 		System.out.printf("\nLength of the line 2 is %.2f\n",length2);
+		dist.equalityCheck(length1,length2);
 	}
 
 }
